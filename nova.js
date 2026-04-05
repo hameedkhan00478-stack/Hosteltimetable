@@ -113,20 +113,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Generate fake reviews (50+) with realistic names and badges ---
-    const firstNames = ["Aarav","Zain","Sofia","Olivia","Muhammad","Rahul","Fatima","Emily","David","Priya","Ahmed","Liam","Noor","Hassan","Aisha","John","Emma","Ali","Sara","Vikram","Kabir","Mei","Chen","Raj","Simran","James","Maria","Carlos","Anita","Abdullah","Zara","Omar","Layla","Michael","Sarah","Chris","Jessica","Bilal","Nadia","Ravi","Tariq","Shan","Gurpreet","Faisal","Kamila","Yusuf","Iqbal","Leila","Daniyal"];
+    const firstNames = ["Aarav","Zain","Sofia khalid","Olivia","Muhammad bilal","Rahul","Fatima","Emily jack","David","Priya","Ahmed","Liam","Noora hussain","Hassan","Aisha","John","Emma","Ali","Sara","Vikram","Kabir","Mei","Chen","Rajkumar","Simran","James","Maria bhat","RJ Carlos","Anita","Abdullah","Zara","Omar","Layla","Michael","Sarah","Chris","Jessica","Bilal","Nadia","Ravi","Tariq","Shan","Gurpreet","Faisal","Kamila","Yusuf","Iqbal","Leila","Daniyal"];
     const lastNames = ["Khan","Sharma","Singh","Patel","Ahmed","Ali","Chen","Kumar","Smith","Johnson","Williams","Brown","Jones","Garcia","Miller","Davis","Rodriguez","Martinez","Hernandez","Lopez","Gonzalez","Wilson","Anderson","Thomas","Taylor","Moore","Jackson","Martin","Lee","Perez","Thompson","White","Harris","Sanchez","Clark","Ramirez","Lewis","Robinson","Walker","Young","Allen","King","Wright","Scott","Torres","Nguyen","Hill","Flores","Green"];
     const reviewTexts = [
-        "Amazing accuracy! Recovered my losses quickly.",
-        "Best detector I've ever used. Premium is worth it.",
-        "Works like magic. Signals are always on point.",
-        "Easy to use, but sometimes the activation takes a moment.",
-        "I've tripled my bankroll in 2 days. Incredible tool.",
-        "The radar sweep is so realistic. Love it.",
-        "Customer support via WhatsApp is super responsive.",
-        "Standard plan gave me consistent 10x signals.",
-        "Finally a predictor that actually works. Thank you!",
-        "The countdown feature is nerve-wracking but rewarding."
-    ];
+    "Honestly, I was skeptical at first. But after using the Standard plan for 2 days, I've seen consistent 8x-12x signals. The radar sweep feels very legit.",
+    "The Premium plan is expensive but worth every rupee. I made back my investment within the first 5 predictions. The 3-day access is perfect.",
+    "Customer support via WhatsApp replied within minutes when my key wasn't working. They helped me re-activate. Great service!",
+    "I like that I don't need to install anything – just open the browser and the radar is live. The floating numbers are mesmerizing.",
+    "The countdown before each prediction is nerve‑racking but when it hits a 20x, the feeling is amazing. Not a single miss so far.",
+    "I've tried other detectors, but this one actually has a realistic radar with blips. The Urdu translations are a nice touch for local users.",
+    "Took me two TRX attempts to get the key (my mistake), but the third time worked perfectly. Received my 44-char key instantly.",
+    "The Basic plan is good for testing – 1 hour gave me 3 winning signals. Upgraded to Standard after that. No regrets.",
+    "I love the 'Invite and Earn' feature. Shared with 5 friends, got 5000 PKR demo money. Would be cool if it was real cash though 😄",
+    "The radar numbers fading near the edges – that's a clever detail. Makes the whole interface feel high-tech.",
+    "I wish there was a dark/light toggle, but the red/black theme grows on you. Doesn't strain my eyes at night.",
+    "Used the 33-char key from the Basic plan. Got a 6x prediction within the first minute. My friend is jealous.",
+    "The progress ring on the loading screen is smooth. 20 seconds felt like 5 because of the changing messages.",
+    "One small issue: the mobile number validation was strict for my country code (+1), but support helped me fix it. Now works fine.",
+    "The wallet balance showing demo money is motivating. I'm at 12,500 PKR from referrals alone. Feels like a game.",
+    "I appreciate that no personal data is sent to any server. Read the Privacy Policy – all localStorage. That's rare these days.",
+    "The 'GET PREDICTION' button cooldown is a bit long (3 seconds), but it prevents spamming. Makes me think before each click.",
+    "Accuracy is not 100% obviously, but out of 20 predictions, I got 17 correct. That's 85% – good enough for me.",
+    "The Easypaisa payment simulation was smooth. The green dot gave me confidence. Other methods being offline is realistic.",
+    "I like that free users can still see the radar and logs – it builds trust before buying. The lock on predictions is fair.",
+    "The timer on my profile shows exactly how much subscription time left. The red pulse below 10 minutes is a nice warning.",
+    "Had an issue with the 99-char key copy – but the 'Copy' button worked perfectly on my phone. Clipboard saved me.",
+    "The review section is entertaining – reading others' success stories made me buy the Premium plan. And it paid off.",
+    "I shared my referral link on WhatsApp groups. Got 2 friends to sign up. Still waiting for their plan purchase to get my bonus.",
+    "The loading screen messages in Urdu made my father laugh. He said 'At least someone cares about our language'.",
+    "The radar canvas sometimes lags on my old phone, but on desktop it's butter smooth. Not a big deal.",
+    "I wish there was a 'Sound on/off' toggle. The ping sound is cool but sometimes I'm in a quiet room.",
+    "The 3-2-1 countdown after prediction is intense. My heart races every time. Great psychological design.",
+    "I accidentally closed the browser during the 20s loading. When I reopened, my profile was still there. Good save system.",
+    "Overall, this is the most polished simulation I've seen. The attention to detail (Urdu, icons, radar numbers) is impressive."
+];
     function randomName() { return firstNames[Math.floor(Math.random()*firstNames.length)] + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)]; }
     function randomBadge() { const r = Math.random(); if(r<0.5) return 'premium'; if(r<0.8) return 'standard'; return 'basic'; }
     function randomStars() { const r = Math.random(); if(r<0.7) return 5; if(r<0.9) return 4; return 3; }
