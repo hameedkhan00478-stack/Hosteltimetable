@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Aurora Profile</title>
+    <!-- Global core -->
+    <link rel="stylesheet" href="galaxy-core.css">
+    <link rel="stylesheet" href="aurora.css">
+    <script src="galaxy-core.js" defer></script>
+    <script src="aurora.js" defer></script>
+</head>
+<body>
+    <div class="main-content aurora-container">
+        <div class="profile-card">
+            <h1><i class="fas fa-id-card"></i> Identification Protocol</h1>
+            <div class="step-indicator">
+                <span class="step" data-step="1">1. Name</span>
+                <span class="step" data-step="2">2. Aviator</span>
+                <span class="step" data-step="3">3. Invitation</span>
+                <span class="step" data-step="4">4. Mobile</span>
+                <span class="step" data-step="5">5. Password</span>
+                <span class="step" data-step="6">6. Confirm</span>
+            </div>
+
+            <!-- Step 1: Name -->
+            <div class="step-container active" id="step1">
+                <div class="bilingual">
+                    <span class="english-text"><i class="fas fa-user"></i> Enter your first and last name</span>
+                    <span class="urdu-text"><i class="fas fa-user"></i> اپنا پہلا اور آخری نام درج کریں</span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="firstName" placeholder="First Name / پہلا نام">
+                    <input type="text" id="lastName" placeholder="Last Name / آخری نام" style="margin-top: 0.5rem;">
+                </div>
+                <button class="next-step btn-primary"><i class="fas fa-arrow-right"></i> Next</button>
+            </div>
+
+            <!-- Step 2: Aviator Platform (scrollable list) -->
+            <div class="step-container" id="step2">
+                <div class="bilingual">
+                    <span class="english-text"><i class="fas fa-gamepad"></i> Select your Aviator platform</span>
+                    <span class="urdu-text"><i class="fas fa-gamepad"></i> اپنا ایوی ایٹر پلیٹ فارم منتخب کریں</span>
+                </div>
+                <select id="aviatorSelect" size="8" class="platform-select">
+                    <!-- Populated by JS -->
+                </select>
+                <div class="step-buttons">
+                    <button class="prev-step btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button class="next-step btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 3: Invitation Link (skip optional) -->
+            <div class="step-container" id="step3">
+                <div class="bilingual">
+                    <span class="english-text"><i class="fas fa-link"></i> Invitation link (optional)</span>
+                    <span class="urdu-text"><i class="fas fa-link"></i> دعوتی لنک (اختیاری)</span>
+                </div>
+                <input type="url" id="inviteLink" placeholder="https://...">
+                <div class="step-buttons">
+                    <button class="prev-step btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button class="skip-step btn-secondary">Skip <i class="fas fa-forward"></i></button>
+                    <button class="next-step btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 4: Mobile Number with country code validation -->
+            <div class="step-container" id="step4">
+                <div class="bilingual">
+                    <span class="english-text"><i class="fas fa-phone"></i> Mobile number (include country code)</span>
+                    <span class="urdu-text"><i class="fas fa-phone"></i> موبائل نمبر (کنٹری کوڈ کے ساتھ)</span>
+                </div>
+                <input type="tel" id="mobileNumber" placeholder="+923001234567">
+                <div class="step-buttons">
+                    <button class="prev-step btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button class="next-step btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 5: Password & Confirm (min 8 chars) -->
+            <div class="step-container" id="step5">
+                <div class="bilingual">
+                    <span class="english-text"><i class="fas fa-lock"></i> Set a strong password (min 8 characters)</span>
+                    <span class="urdu-text"><i class="fas fa-lock"></i> مضبوط پاس ورڈ بنائیں (کم از کم 8 حروف)</span>
+                </div>
+                <input type="password" id="password" placeholder="Password / پاس ورڈ">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password / پاس ورڈ کی تصدیق" style="margin-top: 0.5rem;">
+                <div class="step-buttons">
+                    <button class="prev-step btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button class="next-step btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 6: Final Confirmation with Terms link -->
+            <div class="step-container" id="step6">
+                <div class="privacy-box">
+                    <div class="bilingual">
+                        <span class="english-text">Your simulation data is end‑to‑end encrypted. Our servers do not store or see your actual external account details. This environment is 100% secure.</span>
+                        <span class="urdu-text">آپ کا سمولیشن ڈیٹا اینڈ ٹو اینڈ انکرپٹڈ ہے۔ ہمارے سرورز آپ کی حقیقی اکاؤنٹ تفصیلات کو محفوظ یا نہیں دیکھتے۔ یہ ماحول 100% محفوظ ہے۔</span>
+                    </div>
+                </div>
+                <div class="terms-link">
+                    <a href="#" id="termsLink"><i class="fas fa-file-alt"></i> Click here</a> to read Terms & Conditions and Privacy Policy.
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreeCheckbox">
+                    <label for="agreeCheckbox">I confirm that I have read and agree to the Terms & Privacy Policy.</label>
+                </div>
+                <div class="step-buttons">
+                    <button class="prev-step btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button id="proceedBtn" class="btn-primary" disabled>PROCEED <i class="fas fa-check-circle"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centered loader for step transitions and final 20s loading -->
+        <div id="transitionLoader" class="modal-overlay" style="display: none;">
+            <div class="modal-container">
+                <div class="loader-spinner"></div>
+                <p id="loaderMessageEng" class="english-text">Processing...</p>
+                <p id="loaderMessageUrdu" class="urdu-text">عمل جاری ہے...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer injected by galaxy-core.js -->
+</body>
+                                                                                   </html>
