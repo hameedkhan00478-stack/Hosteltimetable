@@ -1,0 +1,89 @@
+/* Eclipse (20s loading) specific styles */
+.eclipse-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pulsing red vignette effect */
+.eclipse-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0,0,0,0) 30%, rgba(255,0,0,0.08) 100%);
+    pointer-events: none;
+    animation: pulseVignette 2s infinite;
+}
+
+@keyframes pulseVignette {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.loading-wrapper {
+    text-align: center;
+    z-index: 1;
+}
+
+/* Circular progress ring */
+.progress-ring-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 2rem;
+}
+
+.progress-ring-bg {
+    stroke: #2a2a2a;
+    stroke-linecap: round;
+}
+
+.progress-ring-fill {
+    stroke: var(--primary-red);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.05s linear;
+    filter: drop-shadow(0 0 4px red);
+}
+
+.ring-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: var(--primary-red);
+    animation: pulseIcon 1.5s infinite;
+}
+
+@keyframes pulseIcon {
+    0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+    100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Status messages */
+.status-container {
+    margin-top: 1rem;
+}
+
+.status-eng {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ff8888;
+    margin-bottom: 0.5rem;
+}
+
+.status-urdu {
+    font-family: var(--font-urdu);
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    direction: rtl;
+}
