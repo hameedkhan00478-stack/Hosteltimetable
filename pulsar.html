@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Pulsar Radar</title>
+    <!-- Global core -->
+    <link rel="stylesheet" href="galaxy-core.css">
+    <link rel="stylesheet" href="pulsar.css">
+    <script src="galaxy-core.js" defer></script>
+    <script src="pulsar.js" defer></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="logo-area">
+                <i class="fas fa-chart-line"></i>
+                <span class="platform-name" id="platformName">Loading...</span>
+                <span class="brand-sub">PeshoX Intelligence</span>
+            </div>
+            <div class="user-area">
+                <span id="userNameDisplay" class="user-name">Pilot</span>
+                <span id="subscriptionBadge" class="badge free">FREE</span>
+                <button id="profileBtnNav" class="icon-btn" title="Profile">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <button id="logoutBtnNav" class="icon-btn" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Two-Column Layout -->
+        <div class="main-dashboard">
+            <!-- Left Column: Radar Canvas -->
+            <div class="radar-column">
+                <div class="radar-card">
+                    <h3><i class="fas fa-satellite-dish"></i> Live Radar Scan</h3>
+                    <canvas id="radarCanvas" width="600" height="600"></canvas>
+                </div>
+            </div>
+
+            <!-- Right Column: Prediction Controls -->
+            <div class="controls-column">
+                <div class="multiplier-card">
+                    <div class="multiplier-display" id="multiplierDisplay">0.00x</div>
+                    <button id="predictBtn" class="predict-btn disabled">
+                        <i class="fas fa-chart-simple"></i> GET PREDICTION
+                    </button>
+                    <div class="subscription-note bilingual" id="subNote">
+                        <span class="english-text">Free Tier: Unlock prediction with a VIP plan</span>
+                        <span class="urdu-text">فری ٹیر: وی آئی پی پلان کے ساتھ پریڈکشن ان لاک کریں</span>
+                    </div>
+                    <button id="inviteEarnBtn" class="invite-btn">
+                        <i class="fas fa-users"></i> Invite and Earn / انوائٹ کریں اور کمائیں
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom: Log Stream -->
+        <div class="log-stream">
+            <div class="panel-header">
+                <i class="fas fa-list"></i> Signal Log / سگنل لاگ
+            </div>
+            <div class="log-container" id="logContainer">
+                <!-- Logs inserted via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Centered confirmation modal for logout -->
+    <div id="logoutModal" class="modal-overlay" style="display: none;">
+        <div class="modal-container">
+            <h3><i class="fas fa-question-circle"></i> Confirm Logout</h3>
+            <div class="bilingual">
+                <span class="english-text">Are you sure you want to logout?</span>
+                <span class="urdu-text">کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟</span>
+            </div>
+            <div class="modal-buttons">
+                <button id="logoutCancelBtn" class="btn-secondary">Cancel</button>
+                <button id="logoutConfirmBtn" class="btn-primary">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer injected by galaxy-core.js -->
+</body>
+</html>
