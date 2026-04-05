@@ -1,0 +1,134 @@
+/* Falcon (Invite & Earn) specific styles */
+.falcon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+.earn-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-red);
+    border-radius: 28px;
+    padding: 2rem;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(255,0,0,0.2);
+}
+
+.earn-card h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-red);
+    font-size: 1.6rem;
+}
+
+.instructions {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.method {
+    background: #0f0f0f;
+    border-left: 3px solid var(--primary-red);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.method h3 {
+    margin-bottom: 0.5rem;
+    color: #ff8888;
+}
+
+.method ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    color: var(--text-gray);
+}
+
+.method li {
+    margin: 0.25rem 0;
+}
+
+.progress-area {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar-container {
+    background: #333;
+    border-radius: 20px;
+    height: 12px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #ff0000, #ff4444);
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 20px;
+}
+
+.progress-counter {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.whatsapp-share {
+    background: #25D366;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(37,211,102,0.3);
+}
+.whatsapp-share:hover {
+    background: #20b859;
+    transform: scale(1.01);
+}
+.whatsapp-share.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.copy-link-area {
+    background: #0a0a0a;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.link-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.link-box input {
+    flex: 1;
+    font-size: 0.8rem;
+    font-family: monospace;
+    background: #1e1e1e;
+}
+
+.btn-small {
+    background: #333;
+    padding: 8px 16px;
+    white-space: nowrap;
+}
+.btn-small:hover {
+    background: var(--primary-red);
+}
