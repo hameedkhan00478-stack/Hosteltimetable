@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Falcon Earn</title>
+    <!-- Global core -->
+    <link rel="stylesheet" href="galaxy-core.css">
+    <link rel="stylesheet" href="falcon.css">
+    <script src="galaxy-core.js" defer></script>
+    <script src="falcon.js" defer></script>
+</head>
+<body>
+    <div class="main-content falcon-container">
+        <div class="earn-card">
+            <h1><i class="fas fa-chart-line"></i> Invite & Earn / انوائٹ کریں اور کمائیں</h1>
+
+            <!-- Bilingual Instructions -->
+            <div class="instructions">
+                <div class="method">
+                    <h3><i class="fas fa-gift"></i> Referral Bonus</h3>
+                    <div class="bilingual">
+                        <span class="english-text">When a friend you invite buys a plan, you earn demo money:</span>
+                        <span class="urdu-text">جب آپ کے دعوت کردہ دوست کا کوئی پلان خریدتا ہے، تو آپ ڈیمو پیسے کماتے ہیں:</span>
+                    </div>
+                    <ul>
+                        <li>Basic Plan: 2,000 PKR</li>
+                        <li>Standard Plan: 5,000 PKR</li>
+                        <li>Premium Plan: 7,000 PKR</li>
+                    </ul>
+                </div>
+                <div class="method">
+                    <h3><i class="fas fa-share-alt"></i> Share Bonus</h3>
+                    <div class="bilingual">
+                        <span class="english-text">Share the link with 5 different people and earn 5,000 PKR demo money.</span>
+                        <span class="urdu-text">لنک کو 5 مختلف لوگوں کے ساتھ شیئر کریں اور 5,000 روپے ڈیمو پیسے کمائیں۔</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Loader -->
+            <div class="progress-area">
+                <div class="bilingual">
+                    <span class="english-text">Verification Progress</span>
+                    <span class="urdu-text">تصدیق کی پیشرفت</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                </div>
+                <div class="progress-counter" id="progressCounter">0 / 5</div>
+            </div>
+
+            <!-- WhatsApp Share Button -->
+            <button id="whatsappShareBtn" class="whatsapp-share">
+                <i class="fab fa-whatsapp"></i> Share on WhatsApp / واٹس ایپ پر شیئر کریں
+            </button>
+
+            <!-- Copy Link Button (alternative) -->
+            <div class="copy-link-area">
+                <div class="bilingual">
+                    <span class="english-text">Or copy your referral link:</span>
+                    <span class="urdu-text">یا اپنا ریفرل لنک کاپی کریں:</span>
+                </div>
+                <div class="link-box">
+                    <input type="text" id="referralLink" readonly value="https://peshox-intelligence.netlify.app/horizon.html">
+                    <button id="copyLinkBtn" class="btn-small"><i class="fas fa-copy"></i> Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer injected by galaxy-core.js -->
+</body>
+</html>
