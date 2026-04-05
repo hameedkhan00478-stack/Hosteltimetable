@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Comet Payment</title>
+    <!-- Global core -->
+    <link rel="stylesheet" href="galaxy-core.css">
+    <link rel="stylesheet" href="comet.css">
+    <script src="galaxy-core.js" defer></script>
+    <script src="comet.js" defer></script>
+</head>
+<body>
+    <div class="main-content comet-container">
+        <h1><i class="fas fa-shield-alt"></i> Secure Payment Gateway / محفوظ ادائیگی کا گیٹ وے</h1>
+
+        <!-- Payment Methods Grid -->
+        <div class="methods-grid">
+            <div class="method-card" data-method="bank">
+                <i class="fas fa-university"></i>
+                <span>Bank Transfer</span>
+                <div class="status-dot red"></div>
+                <span class="status-text">Offline / آف لائن</span>
+            </div>
+            <div class="method-card" data-method="easypaisa">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Easypaisa</span>
+                <div class="status-dot green"></div>
+                <span class="status-text">Online / آن لائن</span>
+            </div>
+            <div class="method-card" data-method="jazzcash">
+                <i class="fas fa-wallet"></i>
+                <span>JazzCash</span>
+                <div class="status-dot red"></div>
+                <span class="status-text">Offline / آف لائن</span>
+            </div>
+            <div class="method-card" data-method="paypal">
+                <i class="fab fa-paypal"></i>
+                <span>PayPal</span>
+                <div class="status-dot red"></div>
+                <span class="status-text">Offline / آف لائن</span>
+            </div>
+            <div class="method-card" data-method="google">
+                <i class="fab fa-google-wallet"></i>
+                <span>Google Wallet</span>
+                <div class="status-dot red"></div>
+                <span class="status-text">Offline / آف لائن</span>
+            </div>
+        </div>
+
+        <!-- Payment Workflow Area (hidden until Easypaisa selected) -->
+        <div id="paymentWorkflow" class="payment-workflow" style="display: none;">
+            <!-- Loader overlay for initial connection -->
+            <div id="connectorLoader" class="modal-overlay" style="display: none;">
+                <div class="modal-container">
+                    <div class="loader-spinner"></div>
+                    <p class="english-text">Connecting to Community Member...</p>
+                    <p class="urdu-text">کمیونٹی ممبر سے منسلک ہو رہا ہے...</p>
+                </div>
+            </div>
+
+            <!-- Instructions after connection -->
+            <div id="paymentInstructions" style="display: none;">
+                <div class="instruction-box">
+                    <div class="bilingual">
+                        <span class="english-text">Send the exact amount to: <strong>03439850348</strong>. Copy the TRX ID from your SMS and paste it below to generate your key.</span>
+                        <span class="urdu-text">عین رقم اس نمبر پر بھیجیں: <strong>03439850348</strong>. اپنے SMS سے TRX ID کاپی کریں اور نیچے پیسٹ کریں تاکہ آپ کی کلید بن سکے۔</span>
+                    </div>
+                </div>
+                <div class="trx-group">
+                    <input type="text" id="trxInput" placeholder="Enter TRX ID / ٹی آر ایکس آئی ڈی درج کریں">
+                    <button id="confirmPaymentBtn" class="btn-primary">CONFIRM PAYMENT / ادائیگی کی تصدیق کریں</button>
+                </div>
+                <div id="paymentLoader" class="loader-area" style="display: none;">
+                    <div class="loader-spinner"></div>
+                    <span id="loaderMessage" class="bilingual">
+                        <span class="english-text">Verifying with Easypaisa Mainframe...</span>
+                        <span class="urdu-text">ایزی پیسہ مین فریم سے تصدیق ہو رہی ہے...</span>
+                    </span>
+                </div>
+                <div id="successArea" class="success-area" style="display: none;">
+                    <div class="glow-green-box">
+                        <strong>✅ PAYMENT CONFIRMED!</strong><br>
+                        Your Access Key:<br>
+                        <code id="generatedKeyDisplay" class="key-code"></code><br>
+                        <button id="copyKeyBtn" class="btn-small"><i class="fas fa-copy"></i> COPY KEY</button>
+                    </div>
+                    <button id="backToPlansBtn" class="btn-secondary">← Back to Access Plans to Activate / ایکٹیویٹ کرنے کے لیے واپس جائیں</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer injected by galaxy-core.js -->
+</body>
+</html>
