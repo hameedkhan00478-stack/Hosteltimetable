@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Phoenix Profile</title>
+    <!-- Global core -->
+    <link rel="stylesheet" href="galaxy-core.css">
+    <link rel="stylesheet" href="phoenix.css">
+    <script src="galaxy-core.js" defer></script>
+    <script src="phoenix.js" defer></script>
+</head>
+<body>
+    <div class="main-content phoenix-container">
+        <!-- Header with back button -->
+        <div class="profile-header">
+            <button id="backToDashboardBtn" class="btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </button>
+            <h1><i class="fas fa-user-astronaut"></i> My Profile</h1>
+        </div>
+
+        <!-- Wallet Card (Demo Money) -->
+        <div class="wallet-card">
+            <div class="wallet-icon">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <div class="wallet-info">
+                <div class="bilingual">
+                    <span class="english-text">Simulation Balance / سیمولیشن بیلنس</span>
+                    <span class="urdu-text">سیمولیشن بیلنس</span>
+                </div>
+                <div class="wallet-balance" id="walletBalance">0.00 PKR</div>
+                <small class="wallet-note">Earned from invites & referrals / دعوتوں اور ریفرلز سے کمایا گیا</small>
+            </div>
+        </div>
+
+        <!-- Subscription Timer Card -->
+        <div class="timer-card">
+            <h3><i class="fas fa-hourglass-half"></i> Subscription Status</h3>
+            <div class="timer-display" id="timerDisplay">Checking...</div>
+            <div class="progress-ring-timer">
+                <canvas id="timerCanvas" width="80" height="80"></canvas>
+            </div>
+        </div>
+
+        <!-- Account Overview -->
+        <div class="profile-card">
+            <h2><i class="fas fa-id-card"></i> Account Overview</h2>
+            <div class="info-row">
+                <span class="label">Full Name:</span>
+                <span id="fullNameDisplay" class="value">Loading...</span>
+            </div>
+            <div class="info-row key-row">
+                <span class="label">99-Char ID Key:</span>
+                <div class="key-container">
+                    <code id="userKeyDisplay" class="key-code">...</code>
+                    <button id="copyKeyBtn" class="btn-small"><i class="fas fa-copy"></i> Copy</button>
+                </div>
+            </div>
+            <div class="warning-text">⚠️ Keep this key safe! You need it to log back in.</div>
+        </div>
+
+        <!-- Editable Settings -->
+        <div class="profile-card">
+            <h2><i class="fas fa-sliders-h"></i> Edit Settings</h2>
+            <div class="form-group">
+                <label><i class="fas fa-gamepad"></i> Aviator Platform</label>
+                <select id="aviatorSelectProfile" class="platform-select">
+                    <!-- Populated via JS -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-phone"></i> Mobile Number</label>
+                <input type="tel" id="mobileNumberProfile" placeholder="+923001234567">
+                <small class="input-hint">Must start with + and contain 10-15 digits</small>
+            </div>
+            <button id="saveProfileBtn" class="btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+        </div>
+
+        <!-- Account Statistics (Trust Factors) -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-chart-line"></i>
+                <span class="stat-label">Total Scans</span>
+                <span id="totalScans" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-bullseye"></i>
+                <span class="stat-label">Accuracy</span>
+                <span class="stat-value">98.4%</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <span class="stat-label">Standing</span>
+                <span class="stat-value green-text">Excellent / بہترین</span>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="logout-section">
+            <button id="logoutBtnProfile" class="btn-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+
+    <!-- Centered confirmation modal for logout -->
+    <div id="logoutModal" class="modal-overlay" style="display: none;">
+        <div class="modal-container">
+            <h3><i class="fas fa-question-circle"></i> Confirm Logout</h3>
+            <div class="bilingual">
+                <span class="english-text">Are you sure you want to logout?</span>
+                <span class="urdu-text">کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟</span>
+            </div>
+            <div class="modal-buttons">
+                <button id="logoutCancelBtn" class="btn-secondary">Cancel</button>
+                <button id="logoutConfirmBtn" class="btn-primary">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer injected by galaxy-core.js -->
+</body>
+              </html>
