@@ -1,0 +1,212 @@
+/* ========== GALAXY CORE STYLES (Global) ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,700&family=Noto+Nastaliq+Urdu:wght@400;500;700&display=swap');
+
+:root {
+    --primary-red: #ff0000;
+    --primary-red-dark: #cc0000;
+    --bg-black: #050505;
+    --bg-dark: #0a0a0a;
+    --card-bg: #111111;
+    --text-white: #ffffff;
+    --text-gray: #aaaaaa;
+    --border-red: rgba(255, 0, 0, 0.3);
+    --shadow-red: 0 0 10px rgba(255, 0, 0, 0.2);
+    --font-english: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-urdu: 'Noto Nastaliq Urdu', 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: var(--font-english);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Branding (PeshoX Intelligence) - Top Right */
+.peshox-brand {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid var(--border-red);
+    color: var(--primary-red);
+    font-family: monospace;
+    pointer-events: none; /* so it doesn't block clicks */
+}
+.peshox-brand i {
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+/* Main content area - pushes footer down */
+.main-content {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px; /* space for brand */
+}
+
+/* ========== GLOBAL FOOTER ========== */
+.global-footer {
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--border-red);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-top: auto;
+}
+
+/* Buttons & Inputs */
+button, .btn-primary, .btn-secondary {
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-red-dark));
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--font-english);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.5);
+}
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-red);
+    box-shadow: none;
+}
+.btn-secondary:hover {
+    background: rgba(255,0,0,0.2);
+}
+
+input, textarea, select {
+    background-color: #1a1a1a;
+    border: 1px solid var(--border-red);
+    color: var(--text-white);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: var(--font-english);
+    width: 100%;
+    transition: all 0.2s;
+}
+input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 5px var(--primary-red);
+}
+
+/* Centered Modal (for toasts & confirmations) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-container {
+    background: var(--card-bg);
+    border: 1px solid var(--primary-red);
+    border-radius: 24px;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255,0,0,0.5);
+}
+.modal-container p {
+    margin: 1rem 0;
+    line-height: 1.4;
+}
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.modal-buttons button {
+    padding: 8px 20px;
+}
+
+/* Bilingual text helper */
+.bilingual {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.english-text {
+    font-family: var(--font-english);
+}
+.urdu-text {
+    font-family: var(--font-urdu);
+    direction: rtl;
+    font-size: 0.9rem;
+    color: #dddddd;
+}
+
+/* WhatsApp Floating Icon */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25D366;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+.whatsapp-float i {
+    font-size: 32px;
+    color: white;
+}
+
+/* Utility classes */
+.glow-text {
+    text-shadow: 0 0 8px var(--primary-red);
+}
+.text-red {
+    color: var(--primary-red);
+  }
