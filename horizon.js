@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="modal-container" style="max-width: 450px;">
                     <h3 style="color: var(--primary-red);"><i class="fas fa-lock"></i> Login with ID Key</h3>
                     <div class="bilingual">
-                        <span class="english-text">Enter your 99‑character key</span>
-                        <span class="urdu-text">اپنی 99 حروف کی کلید درج کریں</span>
+                        <span class="english-text">Enter your key</span>
+                        <span class="urdu-text">اپنی کلید درج کریں</span>
                     </div>
-                    <input type="text" id="loginKeyInput" placeholder="Paste your 99‑char key here..." maxlength="99" style="margin: 1rem 0; width: 100%;">
+                    <input type="text" id="loginKeyInput" placeholder="Paste your key here..." maxlength="99" style="margin: 1rem 0; width: 100%;">
                     <div class="modal-buttons">
                         <button id="modalCancelBtn" class="btn-secondary">Cancel</button>
                         <button id="modalConfirmBtn" class="btn-primary">Verify & Enter</button>
