@@ -4,7 +4,7 @@
  * - Rotating bilingual status messages every 3 seconds
  * - Checks authentication before showing
  * - Redirects to pulsar.html after completion
- */
+ */ 
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Security: only logged-in users can access this page ---
