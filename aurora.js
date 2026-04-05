@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 // Pakistan specific: if starts with +92, must be exactly 13 characters total
                 if (mobile.startsWith('+92') && mobile.length !== 13) {
-                    PX.showBilingualToast('For Pakistan, mobile number must be exactly 13 characters (e.g., +923001234567).', 'پاکستان کے لیے موبائل نمبر بالکل 13 حروف کا ہونا چاہیے (مثال: +923001234567)۔');
+                    PX.showBilingualToast('For Pakistan, mobile number must be exactly 13 characters (e.g., +923128942224).', 'پاکستان کے لیے موبائل نمبر بالکل 13 حروف کا ہونا چاہیے (مثال: +923128942224)۔');
                     return false;
                 }
                 collectedData.mobileNumber = mobile;
