@@ -1,0 +1,128 @@
+/* Aurora (Profile Setup) specific styles */
+.aurora-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-red);
+    border-radius: 28px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 0 25px rgba(255,0,0,0.2);
+}
+
+.profile-card h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-red);
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-red);
+    padding-bottom: 1rem;
+}
+
+.step {
+    font-size: 0.7rem;
+    color: var(--text-gray);
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.step.active {
+    color: var(--primary-red);
+    background: rgba(255,0,0,0.2);
+    font-weight: bold;
+}
+
+.step-container {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.step-container.active {
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.platform-select {
+    width: 100%;
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid var(--border-red);
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-family: var(--font-english);
+    margin: 1rem 0;
+}
+
+.step-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: space-between;
+}
+
+.privacy-box {
+    background: #1a0000;
+    border-left: 4px solid var(--primary-red);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+}
+
+.terms-link {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.terms-link a {
+    color: #00aaff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.checkbox-group input {
+    width: auto;
+    transform: scale(1.2);
+}
+
+.loader-spinner {
+    border: 3px solid #333;
+    border-top: 3px solid var(--primary-red);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
