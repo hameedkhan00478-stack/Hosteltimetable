@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Nova Plans</title>
+    <!-- Global core -->
+    <link rel="stylesheet" href="galaxy-core.css">
+    <link rel="stylesheet" href="nova.css">
+    <script src="galaxy-core.js" defer></script>
+    <script src="nova.js" defer></script>
+</head>
+<body>
+    <div class="main-content nova-container">
+        <h1><i class="fas fa-crown"></i> Access Plans / ایکسیس پلانز</h1>
+
+        <!-- Bilingual Instructions -->
+        <div class="info-box">
+            <div class="bilingual">
+                <span class="english-text">You need to unlock predictions by buying any plan. You can earn back the money using the detector signals.</span>
+                <span class="urdu-text">آپ کو پیشن گوئیاں کھولنے کے لیے کوئی بھی پلان خریدنا ہوگا۔ آپ ڈیٹیکٹر سگنلز کا استعمال کرکے پیسے واپس کما سکتے ہیں۔</span>
+            </div>
+        </div>
+
+        <!-- Plan Cards (Premium → Standard → Basic) -->
+        <div class="plans-stack">
+            <!-- Premium Plan (Top) -->
+            <div class="plan-card premium">
+                <div class="ribbon">🔥 BEST VALUE</div>
+                <div class="plan-header">
+                    <h2>PREMIUM</h2>
+                    <div class="price">33,000 PKR</div>
+                    <div class="duration"><i class="fas fa-clock"></i> 72 Hours Access</div>
+                </div>
+                <button class="select-plan-btn" data-plan="premium">SELECT PLAN</button>
+            </div>
+
+            <!-- Standard Plan (Middle) -->
+            <div class="plan-card standard">
+                <div class="plan-header">
+                    <h2>STANDARD</h2>
+                    <div class="price">22,000 PKR</div>
+                    <div class="duration"><i class="fas fa-clock"></i> 24 Hours Access</div>
+                </div>
+                <button class="select-plan-btn" data-plan="standard">SELECT PLAN</button>
+            </div>
+
+            <!-- Basic Plan (Bottom) -->
+            <div class="plan-card basic">
+                <div class="plan-header">
+                    <h2>BASIC</h2>
+                    <div class="price">3,000 PKR</div>
+                    <div class="duration"><i class="fas fa-clock"></i> 1 Hour Access</div>
+                </div>
+                <button class="select-plan-btn" data-plan="basic">SELECT PLAN</button>
+            </div>
+        </div>
+
+        <!-- Activation Key Section -->
+        <div class="activation-section">
+            <h3><i class="fas fa-key"></i> Activate Access Key / ایکسیس کی ایکٹیویٹ کریں</h3>
+            <div class="bilingual guide">
+                <span class="english-text">Enter your 33, 44, or 55 character key (Basic/Standard/Premium).</span>
+                <span class="urdu-text">اپنی 33، 44، یا 55 حروف کی کلید درج کریں (بنیادی/معیاری/پریمیم)۔</span>
+            </div>
+            <div class="key-input-group">
+                <input type="text" id="accessKeyInput" placeholder="Paste your key here...">
+                <button id="activateKeyBtn" class="btn-primary">ACTIVATE KEY</button>
+            </div>
+        </div>
+
+        <!-- Reviews Section (Integrated) -->
+        <div id="reviewsSection" class="reviews-section">
+            <h2><i class="fas fa-star"></i> Community Reviews / کمیونٹی ریویوز</h2>
+            <!-- Leave a review (only for VIP users) -->
+            <div class="leave-review" id="leaveReviewBox">
+                <div class="star-rating" id="starRating">
+                    <span data-value="1">☆</span><span data-value="2">☆</span><span data-value="3">☆</span><span data-value="4">☆</span><span data-value="5">☆</span>
+                </div>
+                <textarea id="reviewText" placeholder="Write your experience... (VIP only)"></textarea>
+                <button id="submitReviewBtn" class="btn-secondary">POST REVIEW</button>
+            </div>
+            <!-- Reviews Feed -->
+            <div id="reviewsFeed" class="reviews-feed">
+                <!-- Dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer injected by galaxy-core.js -->
+</body>
+</html>
