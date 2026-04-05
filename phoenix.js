@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof PX !== 'undefined' && PX.checkAuth) {
         if (!PX.checkAuth('horizon.html')) return;
     } else {
-        window.location.href = 'horizon.html';
+        window.location.href = 'horizon.html'; 
         return;
     }
 
