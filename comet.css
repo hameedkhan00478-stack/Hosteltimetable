@@ -38,7 +38,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    display: inline-block;
+    display: inline-block; 
     margin: 0.3rem 0;
 }
 .status-dot.green {
