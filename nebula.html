@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Nebula Signup</title>
+    <!-- Global core -->
+    <link rel="stylesheet" href="galaxy-core.css">
+    <link rel="stylesheet" href="nebula.css">
+    <script src="galaxy-core.js" defer></script>
+    <script src="nebula.js" defer></script>
+</head>
+<body>
+    <div class="main-content nebula-container">
+        <div class="signup-card">
+            <h1><i class="fas fa-user-astronaut"></i> Secure Access Registration</h1>
+            
+            <!-- Bilingual Instructions -->
+            <div class="instructions-box">
+                <div class="bilingual">
+                    <span class="english-text"><i class="fas fa-info-circle"></i> Generate a unique 99‑character key. Copy and save it — you will need it to log in later.</span>
+                    <span class="urdu-text"><i class="fas fa-info-circle"></i> ایک منفرد 99 حروف کی کلید بنائیں۔ اسے کاپی کر کے محفوظ رکھیں — بعد میں لاگ ان کے لیے ضروری ہوگی۔</span>
+                </div>
+            </div>
+
+            <!-- Generate Key Button with loader -->
+            <button id="generateKeyBtn" class="btn-primary">
+                <i class="fas fa-sync-alt"></i> GENERATE KEY / کلید بنائیں
+            </button>
+
+            <!-- Key Display Area (hidden initially) -->
+            <div id="keyDisplayArea" class="key-display-area" style="display: none;">
+                <div class="key-box">
+                    <code id="generatedKey" class="key-text"></code>
+                    <button id="copyKeyBtn" class="btn-small">
+                        <i class="fas fa-copy"></i> COPY
+                    </button>
+                </div>
+                <div class="paste-section">
+                    <div class="bilingual">
+                        <span class="english-text">Confirm your key by pasting it below:</span>
+                        <span class="urdu-text">نیچے پیسٹ کر کے اپنی کلید کی تصدیق کریں:</span>
+                    </div>
+                    <input type="text" id="pasteKeyInput" placeholder="Paste the generated key here..." maxlength="99" autocomplete="off">
+                </div>
+                <button id="signupSubmitBtn" class="btn-primary" disabled>
+                    <i class="fas fa-check-circle"></i> SIGNUP & CONTINUE / سائن اپ اور جاری رکھیں
+                </button>
+            </div>
+
+            <!-- Centered Loader (for key generation) -->
+            <div id="keyLoader" class="modal-overlay" style="display: none;">
+                <div class="modal-container">
+                    <div class="loader-spinner"></div>
+                    <p class="english-text">Generating secure key...</p>
+                    <p class="urdu-text">محفوظ کلید بنائی جا رہی ہے...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer injected by galaxy-core.js -->
+</body>
+</html>
