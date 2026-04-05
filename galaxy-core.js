@@ -44,7 +44,7 @@ function injectGlobalFooter() {
     footer.innerHTML = `
         <p>Thanks to @darkecho</p>
         <div class="footer-disclaimer">
-            ⚠️ This is a fan-made simulation. Not affiliated with any official gaming platform.
+            Encrypted Signal. Authorized for private use under the PeshoX Intelligence Protocol.
         </div>
     `;
     document.body.appendChild(footer);
