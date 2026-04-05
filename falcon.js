@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'horizon.html';
         return;
     }
-
+ 
     // --- DOM elements ---
     const whatsappBtn = document.getElementById('whatsappShareBtn');
     const progressFill = document.getElementById('progressFill');
